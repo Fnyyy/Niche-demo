@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF9F6;
+  --color-ivory-dark: #F0EDE6;
+  --color-charcoal: #2A2B2A;
+  --color-charcoal-light: #4A4A4A;
+  --color-sage: #8A9A86;
+  --color-sage-light: #E8EBE6;
+  --color-gold: #C5A880;
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+:root {
+  --background: var(--color-ivory);
+  --foreground: var(--color-charcoal);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-charcoal-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-charcoal);
+}
+
+/* Base utility classes for typography */
+.heading-primary {
+  @apply font-serif text-5xl md:text-7xl font-medium tracking-tight text-charcoal leading-tight;
+}
+
+.heading-secondary {
+  @apply font-serif text-3xl md:text-5xl font-medium tracking-tight text-charcoal mb-4;
+}
+
+.text-body {
+  @apply font-sans text-charcoal-light text-base md:text-lg leading-relaxed;
+}
+
+.btn-primary {
+  @apply bg-charcoal text-ivory px-8 py-4 uppercase tracking-widest text-sm font-medium transition-colors hover:bg-gold duration-300;
+}
